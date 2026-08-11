@@ -3,12 +3,11 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Logging;
 using MudBlazor.Services;
 using CoeurMobile.App.Core.Config;
-using CoeurMobile.App.Core.Http.Handlers;
+using CoeurMobile.App.Core.DataAccess.Http;
 using CoeurMobile.App.Core.Services;
-using CoeurMobile.App.Modules.Auth.Platform;
-using CoeurMobile.App.Modules.Auth.Services;
-using CoeurMobile.App.Modules.Users.Services;
-using CoeurMobile.App.Shared.Components.ToastListener;
+using CoeurMobile.App.Modules.Auth.DataAccess;
+using CoeurMobile.App.Modules.Users.DataAccess;
+using CoeurMobile.App.Shared.Components.Ui.ToastListener;
 
 namespace CoeurMobile
 {
@@ -38,9 +37,6 @@ namespace CoeurMobile
             builder.Services.AddSingleton<TokenAccessor>();
             builder.Services.AddSingleton<MauiSecureSessionStore>();
             builder.Services.AddSingleton<AuthService>();
-            // IAuthService é o contrato estreito que qualquer módulo pode consumir (Home, Profile, Routes);
-            // resolve pra mesma instância do AuthService concreto, que só a tela de Login (mesmo módulo) injeta
-            // diretamente pra ter acesso a LoginAsync.
             builder.Services.AddSingleton<IAuthService>(sp => sp.GetRequiredService<AuthService>());
             builder.Services.AddSingleton<ToastService>();
             builder.Services.AddTransient<BearerTokenHandler>();

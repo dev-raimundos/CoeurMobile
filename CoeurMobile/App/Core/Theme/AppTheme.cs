@@ -8,49 +8,41 @@ public static class AppTheme
     {
         PaletteLight = new PaletteLight
         {
-            // Primary (md-sys-color-tertiary)
             Primary = "#5F6135",
             PrimaryContrastText = "#FFFFFF",
             PrimaryLighten = "#E5E6AE",
             PrimaryDarken = "#47491F",
 
-            // Secondary (md-sys-color-secondary)
             Secondary = "#755845",
             SecondaryContrastText = "#FFFFFF",
             SecondaryLighten = "#FFDCC6",
             SecondaryDarken = "#5B412F",
 
-            // Tertiary (md-sys-color-primary)
             Tertiary = "#8A5022",
             TertiaryContrastText = "#FFFFFF",
             TertiaryLighten = "#FFDCC6",
             TertiaryDarken = "#6E390C",
 
-            // Info
             Info = "#2196F3",
             InfoContrastText = "#FFFFFF",
             InfoLighten = "#47A7F5",
             InfoDarken = "#0C80DF",
 
-            // Success
             Success = "#00C853",
             SuccessContrastText = "#FFFFFF",
             SuccessLighten = "#00EB62",
             SuccessDarken = "#00A344",
 
-            // Warning
             Warning = "#FF9800",
             WarningContrastText = "#FFFFFF",
             WarningLighten = "#FFA724",
             WarningDarken = "#D68100",
 
-            // Error (md-sys-color-error, ajustado para tom mais avermelhado)
             Error = "#D32F2F",
             ErrorContrastText = "#FFFFFF",
             ErrorLighten = "#FFDAD6",
             ErrorDarken = "#93000A",
 
-            // Base neutra
             Black = "#272C34",
             White = "#FFFFFF",
             Dark = "#424242",
@@ -58,7 +50,6 @@ public static class AppTheme
             DarkLighten = "#575757",
             DarkDarken = "#2E2E2E",
 
-            // Fundos e superfícies (md-sys-color-background / surface)
             Background = "#FFF8F5",
             BackgroundGray = "#FBEBE2",
             Surface = "#FFF8F5",
@@ -68,7 +59,6 @@ public static class AppTheme
             DrawerText = "#221A15",
             DrawerIcon = "#52443B",
 
-            // Texto e estados de ação (baseados em md-sys-color-on-surface)
             TextPrimary = "#221A15",
             TextSecondary = "#221A158A",
             TextDisabled = "#221A1561",
@@ -76,7 +66,6 @@ public static class AppTheme
             ActionDisabled = "#221A1542",
             ActionDisabledBackground = "#221A151F",
 
-            // Linhas, divisores e tabelas (baseados em md-sys-color-outline)
             Divider = "#D7C3B7",
             DividerLight = "#221A15CC",
             LinesDefault = "#221A151F",
@@ -86,14 +75,12 @@ public static class AppTheme
             TableHover = "#221A150A",
             Skeleton = "#221A151C",
 
-            // Tons de cinza utilitários
             GrayDefault = "#9E9E9E",
             GrayLight = "#BDBDBD",
             GrayLighter = "#E0E0E0",
             GrayDark = "#757575",
             GrayDarker = "#616161",
 
-            // Overlays e opacidades (dialogs, hover, ripple)
             OverlayDark = "#21212180",
             OverlayLight = "#FFFFFF80",
             BorderOpacity = 1,
@@ -103,49 +90,41 @@ public static class AppTheme
         },
         PaletteDark = new PaletteDark
         {
-            // Primary (md-sys-color-tertiary)
             Primary = "#C8CA94",
             PrimaryContrastText = "#31320B",
             PrimaryLighten = "#E5E6AE",
             PrimaryDarken = "#47491F",
 
-            // Secondary (md-sys-color-secondary)
             Secondary = "#E4BFA8",
             SecondaryContrastText = "#422B1B",
             SecondaryLighten = "#FFDCC6",
             SecondaryDarken = "#5B412F",
 
-            // Tertiary (md-sys-color-primary)A
             Tertiary = "#FFB785",
             TertiaryContrastText = "#502500",
             TertiaryLighten = "#FFDCC6",
             TertiaryDarken = "#6E390C",
 
-            // Info
             Info = "#3299FF",
             InfoContrastText = "#FFFFFF",
             InfoLighten = "#5CADFF",
             InfoDarken = "#0A85FF",
 
-            // Success
             Success = "#0BBA83",
             SuccessContrastText = "#FFFFFF",
             SuccessLighten = "#0DDE9C",
             SuccessDarken = "#099A6C",
 
-            // Warning
             Warning = "#FFA800",
             WarningContrastText = "#FFFFFF",
             WarningLighten = "#FFB624",
             WarningDarken = "#D68F00",
 
-            // Error (md-sys-color-error, ajustado para tom mais avermelhado)
             Error = "#FF5449",
             ErrorContrastText = "#690005",
             ErrorLighten = "#FFDAD6",
             ErrorDarken = "#93000A",
 
-            // Base neutra
             Black = "#27272F",
             White = "#FFFFFF",
             Dark = "#27272F",
@@ -153,7 +132,6 @@ public static class AppTheme
             DarkLighten = "#383843",
             DarkDarken = "#17171C",
 
-            // Fundos e superfícies (md-sys-color-background / surface)
             Background = "#000000",
             BackgroundGray = "#261E19",
             Surface = "#19120D",
@@ -163,7 +141,6 @@ public static class AppTheme
             DrawerText = "#F0DFD680",
             DrawerIcon = "#F0DFD680",
 
-            // Texto e estados de ação (baseados em md-sys-color-on-surface)
             TextPrimary = "#F0DFD6B3",
             TextSecondary = "#F0DFD680",
             TextDisabled = "#F0DFD633",
@@ -171,7 +148,6 @@ public static class AppTheme
             ActionDisabled = "#F0DFD642",
             ActionDisabledBackground = "#F0DFD61F",
 
-            // Linhas, divisores e tabelas (baseados em md-sys-color-outline)
             Divider = "#F0DFD61F",
             DividerLight = "#F0DFD60F",
             LinesDefault = "#F0DFD61F",
@@ -181,14 +157,12 @@ public static class AppTheme
             TableHover = "#F0DFD60A",
             Skeleton = "#F0DFD61C",
 
-            // Tons de cinza utilitários
             GrayDefault = "#9E9E9E",
             GrayLight = "#BDBDBD",
             GrayLighter = "#E0E0E0",
             GrayDark = "#757575",
             GrayDarker = "#616161",
 
-            // Overlays e opacidades (dialogs, hover, ripple)
             OverlayDark = "#21212180",
             OverlayLight = "#FFFFFF80",
             BorderOpacity = 1,

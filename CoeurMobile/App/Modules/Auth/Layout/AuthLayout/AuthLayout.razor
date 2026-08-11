@@ -1,8 +1,10 @@
-@using CoeurMobile.App.Shared.Components.Ui.NavMenu
-@using CoeurMobile.App.Shared.Components.Ui.ToastListener
+@using Microsoft.AspNetCore.Components
 @using MudBlazor
+@using CoeurMobile.App.Core.Services
 @using CoeurMobile.App.Core.Theme
+@using CoeurMobile.App.Shared.Components.Ui.ToastListener
 @inherits LayoutComponentBase
+@inject ThemeService ThemeService
 
 <MudThemeProvider Theme="AppTheme.Theme" IsDarkMode="ThemeService.IsDarkMode" />
 <MudPopoverProvider />
@@ -10,13 +12,9 @@
 <MudSnackbarProvider />
 <ToastListener />
 
-<div class="app-shell">
-
+<div class="auth-shell">
     <div class="status-bar-safe-area"></div>
-
     <div class="app-content">
         @Body
     </div>
-
-    <NavMenu />
 </div>
