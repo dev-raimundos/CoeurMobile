@@ -1,7 +1,7 @@
 using CoeurMobile.App.Core.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace CoeurMobile.App.Modules.Profile.Components.Screen.Profile;
+namespace CoeurMobile.App.Modules.Profile.Features.Profile;
 
 public partial class Profile
 {

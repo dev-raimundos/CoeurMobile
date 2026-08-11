@@ -24,7 +24,7 @@ Deploying/running the app is done through Visual Studio (`CoeurMobile.slnx`, And
 
 ## Architecture
 
-The folder structure follows an Angular-inspired convention: every module (and `Core`/`Shared`) separates `DataAccess/` (services, API clients, DTOs — no UI) from `Components/Screen/` (routed pages) and `Components/Ui/` (dumb/reusable components), plus a `Layout/` folder where a module owns its own shell.
+The folder structure follows an Angular-inspired convention: every module (and `Core`/`Shared`) separates `DataAccess/` (services, API clients, DTOs — no UI) from `Features/` (routed pages, one folder per feature) and `Components/Ui/` (dumb/reusable components), plus a `Layout/` folder where a module owns its own shell.
 
 ### Folder structure (`CoeurMobile/App/`)
 
@@ -37,11 +37,11 @@ The folder structure follows an Angular-inspired convention: every module (and `
   - `Layout/MainLayout/` — the authenticated app shell (nav menu, toast listener, MudBlazor providers).
 - `Modules/` — one folder per feature (currently `Auth`, `Home`, `Profile`, `Palette`, `Users`). Put new features here rather than in `Core`. Inside each module, use whichever of these subfolders apply — don't create empty ones:
   - `DataAccess/` — API clients, module-owned services (e.g. `AuthService`, `MauiSecureSessionStore`), and `Dtos/`.
-  - `Components/Screen/<Name>/` — routed pages (`@page`), one folder per screen.
+  - `Features/<Name>/` — routed pages (`@page`) and other feature-level components (e.g. a router-rendered guard like `RedirectToLogin`), one folder per feature. Deliberately not nested under `Components/` — keeps the path shallow since a feature is the top-level unit of a module, not a reusable piece.
   - `Components/Ui/<Name>/` — presentational components owned by the module but not routed (e.g. `Users/Components/Ui/UserDetailsDialog`).
   - `Layout/<Name>/` — a layout the module owns (e.g. `Auth/Layout/AuthLayout`, used by the unauthenticated `/login` route).
 - `Shared/Components/Ui/` — reusable UI not owned by a single module (`NavMenu`, `NotFound`, `ToastListener`).
-- `Routes.razor` — the Blazor `Router`; wraps everything in `CascadingAuthenticationState` + `AuthorizeRouteView` with a fallback `RequireAuthenticatedUser()` policy (see `MauiProgram.cs`), so **every route requires auth by default** — unauthenticated users are redirected via `RedirectToLogin` (`Modules/Auth/Components/Screen/RedirectToLogin`).
+- `Routes.razor` — the Blazor `Router`; wraps everything in `CascadingAuthenticationState` + `AuthorizeRouteView` with a fallback `RequireAuthenticatedUser()` policy (see `MauiProgram.cs`), so **every route requires auth by default** — unauthenticated users are redirected via `RedirectToLogin` (`Modules/Auth/Features/RedirectToLogin`).
 
 ### Component convention
 

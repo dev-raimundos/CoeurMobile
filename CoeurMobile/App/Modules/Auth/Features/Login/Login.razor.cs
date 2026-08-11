@@ -2,7 +2,7 @@ using CoeurMobile.App.Modules.Auth.DataAccess;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 
-namespace CoeurMobile.App.Modules.Auth.Components.Screen.Login;
+namespace CoeurMobile.App.Modules.Auth.Features.Login;
 
 public partial class Login
 {

@@ -1,7 +1,7 @@
 using CoeurMobile.App.Core.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace CoeurMobile.App.Modules.Home.Components.Screen.Home;
+namespace CoeurMobile.App.Modules.Home.Features.Home;
 
 public partial class Home
 {

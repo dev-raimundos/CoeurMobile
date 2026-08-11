@@ -1,7 +1,7 @@
 using CoeurMobile.App.Core.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace CoeurMobile.App.Modules.Palette.Components.Screen.Palette;
+namespace CoeurMobile.App.Modules.Palette.Features.Palette;
 
 public partial class Palette
 {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace CoeurMobile.App.Modules.Auth.Components.Screen.RedirectToLogin;
+namespace CoeurMobile.App.Modules.Auth.Features.RedirectToLogin;
 
 public partial class RedirectToLogin
 {

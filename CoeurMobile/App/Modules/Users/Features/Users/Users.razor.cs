@@ -4,7 +4,7 @@ using CoeurMobile.App.Modules.Users.DataAccess.Dtos;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 
-namespace CoeurMobile.App.Modules.Users.Components.Screen.Users;
+namespace CoeurMobile.App.Modules.Users.Features.Users;
 
 public partial class Users
 {
