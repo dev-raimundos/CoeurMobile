@@ -7,4 +7,12 @@ public partial class Home
 {
     [Inject]
     protected IAuthService AuthService { get; set; } = default!;
+
+    private string FirstName
+    {
+        get
+        {
+            return AuthService.CurrentSession?.Name.Split(' ')[0] ?? "Não Definido";
+        }
+    }
 }
